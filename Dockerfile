@@ -14,6 +14,8 @@ RUN apt-get update && \
     
 RUN apt-get install -y git
 
+RUN apk add --no-cache git bash git-subtree
+
 RUN npm install -g hexo
 RUN npm install  hexo --save
 
