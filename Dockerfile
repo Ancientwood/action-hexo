@@ -11,6 +11,8 @@ LABEL com.github.actions.color="red"
 
 RUN apt-get update && \
     apt-get install -y git-core
+    
+RUN apt-get install -y git
 
 RUN npm install -g hexo
 RUN npm install  hexo --save
