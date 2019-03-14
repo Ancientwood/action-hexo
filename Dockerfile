@@ -13,6 +13,7 @@ RUN apt-get update
 RUN apt-get install git bash -y
 
 RUN npm install -g hexo
+RUN npm install hexo --save
 
 COPY "entrypoint.sh" "/entrypoint.sh"
 ENTRYPOINT ["/entrypoint.sh"]
