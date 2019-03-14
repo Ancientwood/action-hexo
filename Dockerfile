@@ -1,5 +1,4 @@
 FROM node:10
-FROM alpine:latest
 
 LABEL version="2.0.0"
 LABEL repository="http://github.com/Ancientwood/action-hexo"
