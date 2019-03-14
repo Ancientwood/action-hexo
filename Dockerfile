@@ -9,17 +9,11 @@ LABEL com.github.actions.description="Wraps the hexo CLI to enable common hexo c
 LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="red"
 
-RUN apt-get update && \
-    apt-get install -y git-core
-    
-RUN apt-get install -y git
-
-RUN apk add --no-cache git bash git-subtree
+RUN apt-get update 
+RUN apt-get install git bash git-subtree -y
 
 RUN npm install -g hexo
-RUN npm install  hexo --save
 
 COPY "entrypoint.sh" "/entrypoint.sh"
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["help"]
 CMD ["chmod +x /entrypoint.sh"]
