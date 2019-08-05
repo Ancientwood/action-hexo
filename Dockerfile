@@ -10,13 +10,12 @@ LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="red"
 
 RUN apt-get update  && \
-    apt-get install -y git-core
+    apt-get install -y git-core git bash
+
 
 RUN npm install -g hexo
-RUN npm install -g hexo-deployer-git
-
-RUN npm install  hexo --save
-RUN npm install  hexo-deployer-git --save
+RUN npm install hexo --save
+RUN npm install hexo-deployer-git --save
 
 COPY "entrypoint.sh" "/entrypoint.sh"
 CMD ["chmod +x /entrypoint.sh"]
