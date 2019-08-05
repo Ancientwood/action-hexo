@@ -12,7 +12,7 @@ LABEL com.github.actions.color="red"
 RUN apt-get update  && \
     apt-get install -y git-core
 
-RUN npm install hexo hexo-deployer-git --save
+RUN npm install -g hexo hexo-deployer-git --save
 
 
 COPY "entrypoint.sh" "/entrypoint.sh"
